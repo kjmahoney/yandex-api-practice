@@ -2,7 +2,7 @@
 
 
 
-$("#button").on("click", () => {
+$("#originalWordBox, select").change(() => {
 
 //look for English to Chinese and vice versa
   if ($("select").val() == "English"){
