@@ -9,18 +9,23 @@
 
   <div class="column">
 
-
+    <h3>English-Chinese Translator</h3>
     <div class="row">
-      <input id="originalWordBox"></input>
-      <select id = "conversionBox">
-        <option value="English">English to Chinese</option>
-        <option value="Chinese">Chinese to English</option>
-      </select>
+      <p>From:</p><input class = "no-margin" id="originalWordBox"></input>
+      <p>To:</p><input class = "no-margin" id="translationWordBox"></input>
+
       <button id="button" type="button" name="button">Translate</button>
     </div>
+    <select id = "conversionBox">
+      <option value="English">English to Chinese</option>
+      <option value="Chinese">Chinese to English</option>
+    </select>
 
-      <input id="translationWordBox"></input>
+
+      <a href="http://translate.yandex.com/">Powered by Yandex.Translate</a>
+
   </div>
+
 
   <script src="js/jquery.js"></script>
   <script src="js/app.js"></script>
