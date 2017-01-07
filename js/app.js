@@ -1,3 +1,11 @@
+//Switch the values of the From and To languages
+// $("#switchButton").click(()=>{
+//   let switchVal1 = $("#conversionBoxFrom").val()
+//   let switchVal2
+//   $("#conversionBoxFrom").val($("#conversionBoxTo").val())
+//   $("#conversionBoxTo").val($("#conversionBoxFrom").val())
+// })
+
 $("#originalWordBox, select").change(() => {
 
   //select language to translate from
