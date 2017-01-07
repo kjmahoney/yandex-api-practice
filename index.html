@@ -2,36 +2,50 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Simple Translate</title>
+  <title>Translate</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div class="column">
 
-    <h3>English-Chinese Translator</h3>
+    <h3>Kev's Friendly Translator</h3>
     <div class="row">
-      <p>From:</p><input class = "no-margin" id="originalWordBox"></input>
-      <p>To:</p><input class = "no-margin" id="translationWordBox"></input>
+
+      <div class ="column">
+
+      <div class = "row">
+      <p>From:</p>
       <select id = "conversionBoxFrom">
         <option value="en">English</option>
         <option value="zh">Chinese</option>
         <option value="ru">Russian</option>
         <option value="es">Spanish</option>
-      </select>
-
-      <select id = "conversionBoxTo">
-        <option value="en">English</option>
-        <option value="zh">Chinese</option>
-        <option value="ru">Russian</option>
-        <option value="es">Spanish</option>
+        <option value="ko">Korean</option>
       </select>
 
     </div>
-    <select id = "conversionBox">
-      <option value="English">English to Chinese</option>
-      <option value="Chinese">Chinese to English</option>
-    </select>
+    <input class = "no-margin" id="originalWordBox" placeholder ="Input text here!"></input>
+    </div>
+
+    <div class = "column">
+    <div class = "row">
+      <p>To:</p>
+      <select id = "conversionBoxTo">
+        <option value="es">Spanish</option>
+        <option value="zh">Chinese</option>
+        <option value="ru">Russian</option>
+        <option value="en">English</option>
+        <option value="ko">Korean</option>
+      </select>
+
+    </div>
+
+    <input class = "no-margin" id="translationWordBox" placeholder ="Output will show here"></input>
+
+    </div>
+    </div>
+
 
 
       <a href="http://translate.yandex.com/">Powered by Yandex.Translate</a>
