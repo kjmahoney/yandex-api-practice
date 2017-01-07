@@ -1,10 +1,10 @@
-//Switch the values of the From and To languages
-// $("#switchButton").click(()=>{
-//   let switchVal1 = $("#conversionBoxFrom").val()
-//   let switchVal2
-//   $("#conversionBoxFrom").val($("#conversionBoxTo").val())
-//   $("#conversionBoxTo").val($("#conversionBoxFrom").val())
-// })
+// Switch the values of the From and To languages
+$("#switchButton").click(()=>{
+  let switchValFrom = $("#conversionBoxFrom").val()
+  let switchValTo = $("#conversionBoxTo").val()
+  $("#conversionBoxFrom").val(switchValTo)
+  $("#conversionBoxTo").val(switchValFrom)
+})
 
 $("#originalWordBox, select").change(() => {
 
