@@ -1,28 +1,34 @@
-// Switch the values of the From and To languages
+//SWITCH BUTTON
+
+// Button switches the values of the From and To languages
 $("#switchButton").click(()=>{
 
-  //change value of the select boxes
+  //change value of the 'select' boxes when button cliked
   let switchSelectFrom = $("#conversionBoxFrom").val()
   let switchSelectTo = $("#conversionBoxTo").val()
   $("#conversionBoxFrom").val(switchSelectTo)
   $("#conversionBoxTo").val(switchSelectFrom)
 
-  //change value of the text boxes
+  //change value of the 'text' boxes when button clicked
   let switchBoxTo = $("#translationWordBox").val()
   let switchBoxFrom = $("#originalWordBox").val()
   $("#originalWordBox").val(switchBoxTo)
   $("#translationWordBox").val(switchBoxFrom)
 })
 
+
+//MAKE THE API CALL
+
+//any time a word is entered in the input box, trigger a translation
 $("#originalWordBox, select").change(() => {
 
-  //select language to translate from
+  //create variable for from language
   let fromLang = $("#conversionBoxFrom").val()
 
-  //select langauge to translate to
+  //create variable for to language
   let toLang = $("#conversionBoxTo").val()
 
-  //Find word to be Translated
+  //create variable for word to be translated
   const originalWord =$("#originalWordBox").val()
 
   //Define URL to be called to Yandex
@@ -34,7 +40,7 @@ $("#originalWordBox, select").change(() => {
   +"-"
   +toLang
 
-  //Make call to Yandex
+  //Make Ajax call to Yandex API
   $.ajax({
     url: APIUrl,
     type: "get",
