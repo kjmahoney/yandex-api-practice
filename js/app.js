@@ -1,24 +1,4 @@
-//SWITCH BUTTON
-
-// Button switches the values of the From and To languages
-$("#switchButton").click(()=>{
-
-  //change value of the 'select' boxes when button cliked
-  let switchSelectFrom = $("#conversionBoxFrom").val()
-  let switchSelectTo = $("#conversionBoxTo").val()
-  $("#conversionBoxFrom").val(switchSelectTo)
-  $("#conversionBoxTo").val(switchSelectFrom)
-
-  //change value of the 'text' boxes when button clicked
-  let switchBoxTo = $("#translationWordBox").val()
-  let switchBoxFrom = $("#originalWordBox").val()
-  $("#originalWordBox").val(switchBoxTo)
-  $("#translationWordBox").val(switchBoxFrom)
-})
-
-
 //MAKE THE API CALL
-
 //any time a word is entered in the input box, trigger a translation
 $("#originalWordBox, select").change(() => {
 
@@ -52,4 +32,21 @@ $("#originalWordBox, select").change(() => {
   }).always(() => {
     console.log("Ajax working")
   })
+})
+
+//SWITCH BUTTON
+// Button switches the values of the From and To languages
+$("#switchButton").click(()=>{
+
+  //change value of the 'select' boxes when button cliked
+  let switchSelectFrom = $("#conversionBoxFrom").val()
+  let switchSelectTo = $("#conversionBoxTo").val()
+  $("#conversionBoxFrom").val(switchSelectTo)
+  $("#conversionBoxTo").val(switchSelectFrom)
+
+  //change value of the 'text' boxes when button clicked
+  let switchBoxTo = $("#translationWordBox").val()
+  let switchBoxFrom = $("#originalWordBox").val()
+  $("#originalWordBox").val(switchBoxTo)
+  $("#translationWordBox").val(switchBoxFrom)
 })
